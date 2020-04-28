@@ -21,7 +21,7 @@ class FaceBoundingBoxSerializer(serializers.Serializer):
     top_left_y = serializers.IntegerField()
     bottom_right_x = serializers.IntegerField()
     bottom_right_y = serializers.IntegerField()
-    contains_mask = serializers.BooleanField()
+    label = serializers.CharField()
 
     def create(self, validated_data):
         return FaceBoundingBox(**validated_data)
